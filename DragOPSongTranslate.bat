@@ -8,7 +8,7 @@ echo.Output of translated text will be in Output.txt
 echo.
 echo.Press any key to start...
 pause >nul
-set /p Songname=Songname:
+set /p Songname=Songname: 
 
 :: Add /n(Splitter) on each and every line.
 setLocal EnableDelayedExpansion
