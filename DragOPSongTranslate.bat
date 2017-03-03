@@ -8,7 +8,7 @@ echo.Output of translated text will be in Output.txt
 echo.
 echo.Press any key to start...
 pause >nul
-set /p Songname=Songname: 
+set /p Songname=Song Name: 
 
 :: Add /n(Splitter) on each and every line.
 setLocal EnableDelayedExpansion
@@ -16,13 +16,13 @@ for /f "tokens=* delims= " %%a in (input.txt) do (
 set /a N+=1
 echo %%a\n>>Part-1-Translate.txt )
 
-::Cut Extra /n
-set Cut=<Part-1-Translate.txt
-echo %Cut:~0,-2% >Part-1-Translate.txt
-
 ::Move all text onto one line
 for /f "delims=" %%a in (Part-1-Translate.txt) do (
-echo/|set /p ="%%a%" )>>Part-2-translate.txt
+echo/|set /p ="%%a" )>>Part-2-translate.txt
+
+::Cut Extra /n
+set /p cut=<Part-2-Translate.txt
+echo %cut:~0,-3%> Part-2-Translate.txt
 
 ::Add DragOP/ModPE formated code.
 set /p Convert2=<Part-2-translate.txt
