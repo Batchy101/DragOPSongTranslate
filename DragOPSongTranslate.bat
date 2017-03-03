@@ -10,7 +10,7 @@ echo.Press any key to start...
 pause >nul
 set /p Songname=Song Name: 
 
-:: Add /n(Splitter) on each and every line.
+::Add /n(Splitter) on each and every line.
 setLocal EnableDelayedExpansion
 for /f "tokens=* delims= " %%a in (input.txt) do (
 set /a N+=1
