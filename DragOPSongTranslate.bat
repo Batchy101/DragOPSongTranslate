@@ -32,6 +32,7 @@ echo %Convereted3%>output.txt )
 ::Remove no longer needed files.
 del part-1-translate.txt
 del part-2-translate.txt
+::Text output
 cls & type output.txt
 echo.
 echo.Above is also in output.txt
