@@ -1,5 +1,5 @@
 # DragOPSongTranslate
-<b>Note: As of now this is unfinished.
+<b>Note: As of now this is unfinished.</b>
 
 Translate song lyrics to work with ModPE format.
 
