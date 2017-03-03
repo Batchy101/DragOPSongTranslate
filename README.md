@@ -1,7 +1,7 @@
 # DragOPSongTranslate
 <b>Note: As of now this is unfinished.</b>
 
-Translate song lyrics to work with ModPE format.
+Create your own 'songs' to work with DragOP, with SingSong.
 
 <b>How To Add Songs</b>
 
