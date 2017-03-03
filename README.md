@@ -1,5 +1,4 @@
 # DragOPSongTranslate
-<b>Note: As of now this is unfinished.</b>
 
 Create your own 'songs' to work with DragOP, with SingSong.
 
