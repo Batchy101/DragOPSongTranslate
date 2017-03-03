@@ -1,10 +1,10 @@
 @echo off
-title DragOPSongTranslate
 ::Create file for input.txt if not already made.
+title DragOPSongTranslate
 IF NOT EXIST input.txt type NUL > input.txt
 echo.Change regular lyrics into code for SingSong, for DragOP.js. 
 echo.Put all text into Input.txt - Linebreaks represent a new chat message.
-echo.Code Output will be in Output.txt
+echo.Output of translated text will be in Output.txt
 pause >nul
 set /p Songname=Songname:
 
@@ -20,7 +20,7 @@ echo/|set /p ="%%a%" )>>Part-2-translate.txt
 
 ::Add DragOP/ModPE formated code.
 set /p Convert2=<Part-2-translate.txt
-set Convereted3=["%songname%", "%Convert2%".split("\n")],
+set Convereted3=["%songname%", "%Convert2:~0,-2%".split("\n")],
 echo %Convereted3%>output.txt )
 
 ::Remove no longer needed files.
