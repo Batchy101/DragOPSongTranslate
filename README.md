@@ -1,6 +1,7 @@
 # DragOPSongTranslate
 
-Create your <i>own songs</i> to work with DragOP, with SingSong.
+Create your <i>own songs</i> to work with DragOP for SingSong.
+You could create your own chat presets, with it I guess.
 
 <b>How To Add Songs</b>
 
