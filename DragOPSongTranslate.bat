@@ -35,7 +35,7 @@ echo %Convereted3%>output.txt
 
 del part-1-translate.txt
 del part-2-translate.txt
-type output.txt
+cls & type output.txt
 echo.
 echo.Above is also in output.txt
 echo.
