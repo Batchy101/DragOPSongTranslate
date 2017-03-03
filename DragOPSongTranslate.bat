@@ -1,31 +1,39 @@
 @echo off
-echo.DragOP song translater.
-echo.Put all text into Translate.txt
-echo.Output of translated text will be in Translated.txt
+::Create file for input.txt if not already made.
+IF NOT EXIST input.txt type NUL > input.txt
+echo.Change regular song lyrics into code for SingSong, for DragOP.js. 
+echo.Put all text into Input.txt
+echo.Output of translated text will be in Output.txt
 echo.
 echo.When done adding your song lyrics, press any key to continue
 pause >nul
-set /p Songname=Songname: 
-@echo off
+set /p Songname=Songname:
+ 
+:: Add /n(Splitter) on each and every line.
+
 setLocal EnableDelayedExpansion
-for /f "tokens=* delims= " %%a in (translate.txt) do (
+for /f "tokens=* delims= " %%a in (input.txt) do (
 set /a N+=1
 echo %%a\n>>Part-1-Translate.txt
 )
 
-for /f "delims=" %%a in (Part-1-Translate.txt) do cmd /c  (>>"Part-2-Translate.txt" echo %%a)
-del Part-1-Translate.txt
+::Move all text onto one line
 
-::Add ModPE formated code.
-
-for /f "delims=" %%a in (Part-2-Translate.txt) do (
+for /f "delims=" %%a in (Part-1-Translate.txt) do (
 echo/|set /p ="%%a%"
-)>>Part-3-translate.txt
-del Part-2-Translate.txt
-::Add ModPE formated code.
+)>>Part-2-translate.txt
 
-set /p Convert3=<Part-3-translate.txt
-set Convereted4=["%songname%", "%Convert3%".split("\n")],
-echo %Convereted4%>Translated.txt
+::Add DragOP/ModPE formated code.
+
+set /p Convert2=<Part-3-translate.txt
+set Convereted3=["%songname%", "%Convert2%".split("\n")],
+echo %Convereted3%>output.txt
 )
-del Part-3-Translate.txt
+
+::Remove no longer needed files.
+
+del part-1-translate.txt
+del part-2-translate.txt
+type output.txt
+echo.
+echo.Above is also in output.txt
