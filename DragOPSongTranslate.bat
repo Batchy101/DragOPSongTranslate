@@ -8,7 +8,7 @@ echo.Output of translated text will be in Output.txt
 pause >nul
 set /p Songname=Songname:
 
-:: Add /n(Splitter) on each and every line.
+:: Add \n(Splitter) on each and every line.
 setLocal EnableDelayedExpansion
 for /f "tokens=* delims= " %%a in (input.txt) do (
 set /a N+=1
@@ -20,6 +20,7 @@ echo/|set /p ="%%a%" )>>Part-2-translate.txt
 
 ::Add DragOP/ModPE formated code.
 set /p Convert2=<Part-2-translate.txt
+::Add everything except the final \n
 set Convereted3=["%songname%", "%Convert2:~0,-2%".split("\n")],
 echo %Convereted3%>output.txt )
 
