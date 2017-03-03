@@ -1,6 +1,6 @@
 # DragOPSongTranslate
 
-Create your own 'songs' to work with DragOP, with SingSong.
+Create your own <i>songs</i> to work with DragOP, with SingSong.
 
 <b>How To Add Songs</b>
 
