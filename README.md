@@ -7,4 +7,4 @@ You could create your own chat presets with it, I guess.
 
 Add the text in output.txt to DragOP.js line 4160(as of 3/2/17 Beta Build) probably going to need explorer the JS file for newer/release versions.
 
-You can look for "songList: [" in the JS file, hopefully that helps.
+You can look for "songList: [" in the DragOP's JS file, hopefully that helps.
