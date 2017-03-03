@@ -1,6 +1,6 @@
 @echo off
-::Create file for input.txt if not already made.
 title DragOPSongTranslate
+::Create file for input.txt if not already made.
 IF NOT EXIST input.txt type NUL > input.txt
 echo.Change regular lyrics into code for SingSong, for DragOP.js. 
 echo.Put all text into Input.txt - Linebreaks represent a new chat message.
